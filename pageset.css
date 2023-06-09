@@ -1,0 +1,54 @@
+a{
+	font-size: 18px;
+	margin:8px;
+	color:#11659a;
+}
+p{
+	font-size: 14px;
+	font-family:'宋体'
+}
+h2{
+	color:darkmagenta;
+	font-size: 30px;
+}
+h3{
+	
+}
+.blocks{
+	padding-bottom: 10px;
+}
+.block1{
+	padding: 1%;
+}
+.block2{
+	padding: 1%;
+}
+.title a{
+	font-size: 25px
+}
+#box11{
+	float: left;
+	width: 10%;
+	margin: 1%
+}
+#box12{
+	float: right;
+	width: 90%;
+	margin: 1%;
+	margin-left: 0%;
+}
+.parentblock{
+	display:flex;
+	margin: 0.5%;
+}
+#box13{
+	float: left;
+	width: 47.5%;
+}
+#box14{
+	float: right;
+	width: 47.5%;
+}
+#boxtransparent{
+	color: #ffffff;
+}
