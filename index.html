@@ -3,10 +3,26 @@
     <head>
         <meta charset="utf-8"><!--设定编码-->
 		<link rel="stylesheet" type="text/css" href="pageset.css">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">   <!--手机页面自适应-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="该程序是四水合铜离子8月19号的第一个程序，考虑改名为Favorskii">   <!--网页描述-->
         <meta name="suthor" content="四水合铜离子">   <!--手机页面自适应-->
         <title>四水合铜离子的个人网页</title>
+		<style>
+            @media only screen and (max-width: 600px) {
+                /* 在屏幕宽度小于等于600px时应用的样式 */
+                /* 可以设置元素的宽度、高度、字体大小等 */
+                body {
+                    background-size: cover;
+                }
+                img {
+                    width: 100%;
+                }
+                .block1, .block2 {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+        </style>
     </head>     <!--head头部文件-->
 	<body background="背景图.jpg"
 		  style="background-repeat: no-repeat;background-size: 100% 100%; background-attachment: fixed">
@@ -15,41 +31,6 @@
 		</div>
 		<div class="backgroundset" id="background">
 			<div class="parentblock">
-				<div class="block1" style="background-color:rgba(82,82,136,0.25)" id="box11">
-					<h2>快速点击</h2>
-					<div class="blocks">
-						<img src="点.png" height=18px>
-						<a href="http://www.elearning.shu.edu.cn/portal" target="_blank">网上平台</a>
-					</div>
-					<div class="blocks">
-						<img src="点.png" height=18px>
-						<a href="https://jwb.shu.edu.cn/" target="_blank">教务部</a>
-					</div>
-					<div class="blocks">
-						<img src="点.png" height=18px>
-						<a href="https://lib.shu.edu.cn/" target="_blank">图书馆</a>
-					</div>
-					<div class="blocks">
-						<img src="点.png" height=18px>
-						<a href="https://newmail.shu.edu.cn/coremail/" target="_blank">上大邮箱</a>
-					</div>
-					<div class="blocks">
-						<img src="点.png" height=18px>
-						<a href="https://chemlab.shu.edu.cn/index.htm" target="_blank">实验中心</a>
-					</div>
-					<div class="blocks">
-						<img src="点.png" height=18px>
-						<a href="http://ankai365.shu.edu.cn/" target="_blank">安开网</a>
-					</div>
-					<div class="blocks">
-						<img src="点.png" height=18px>
-						<a href="http://xk.autoisp.shu.edu.cn/" target="_blank">选课网站</a>
-					</div>
-					<div class="blocks">
-						<img src="点.png" height=18px>
-						<a href="https://cj.shu.edu.cn/Home/StudentIndex" target="_blank">教务系统</a>
-					</div>
-				</div>
 				<div class="block1" style="background-color: rgba(23,114,180,0.25)" id="box12">
 					<div class="title">
 						<h2>网站简介</h2>
@@ -59,21 +40,16 @@
 						<div class="block2" style="background-color: rgba(23,114,180,0.25)" id="box13">
 							<h3>资源查找</h3>
 							<p style="text-indent:2em;">该分区包含各种资源，不断更新中</p>
-							<li><a>学习资料</a>：包含专业课的各类资源，包括电子书、实验报告、课件等</li>
-							<li><a>软件安装</a>：包含PS、PR、ChemDraw等各类软件的安装包，进来还有更多</li>
-							<li><a>实用网站</a>：包含各类实用网站，为您的搜索提供一些便利</li>
-							<li><a>隐藏空间</a>：输入token，即可获得更多资源</li>
+							<li><a href="seek/study/main.html" target="_blank">学习资料</a></li>
+							<li><a href="seek/software/main.html" target="_blank">软件安装</a></li>
+							<li><a>实用网站</a></li>
+							<li><a>隐藏空间</a></li>
 							<li><a>……</a></li>
 						</div>
 						<div id="boxtransparent">&nbsp;&nbsp;</div>
 						<div class="block2" style="background-color: rgba(23,114,180,0.25)" id="box14">
 							<h3>一起学习</h3>
-							<p style="text-indent:2em;">该分区展示个人学习的笔记、资源等内容，不断更新中</p>
-							<li><a>公共基础课</a>：公共基础课的各类资源，包括电子书、实验报告、课件等</li>
-							<li><a>化学类课程</a>：已学的各类化学类课程的相关资源，供参考</li>
-							<li><a>机器学习</a>：专门开了一个机器学习(Machine Learning)入门，供参考</li>
-							<li><a>文献阅读</a>：个人文献阅读情况，尝试快速更新</li>
-							<li><a>技能学习</a>：各类技能学习，包括pr、ps、ae等</li>
+							<p style="text-indent:2em;">该分区……</p>
 							<li><a>……</a></li>
 						</div>
 					</div>
@@ -83,18 +59,18 @@
 					<div class="parentblock">
 						<div class="block2" style="background-color: rgba(23,114,180,0.25)" id="box13">
 							<h3>按块查找</h3>
-							<p style="text-indent:2em;">该分区资源按学校等归纳整理好，不断更新中</p>
-							<li><a>SHU专属</a>：鼠大的各类资源网站等</li>
+							<p style="text-indent:2em;">按分区</p>
+							<li><a href="block/SHU/main.html" target="_blank">SHU专属</a></li>
 							<li><a>……</a></li>
 						</div>
 						<div id="boxtransparent">&nbsp;&nbsp;</div>
 						<div class="block2" style="background-color: rgba(23,114,180,0.25)" id="box13">
 							<h3>发疯日常</h3>
 							<p style="text-indent:2em;">该分区展示个人作品，包含照片、视频等，慎入！</p>
-							<li><a>微信公众号</a>：关注微信公众号“四水合铜离子”，获取更多资源</li>
-							<li><a>B站账号</a>：关注B站账号“四水合铜离子_fld”，收看相关视频</li>
-							<li><a>日常攻略</a>：想到什么写什么的网页，可能会更一些日常生活小技巧之类的</li>
-							<li><a>自己写的小玩意</a>：一些自己写的可能有用的小玩意</li>
+							<li><a>微信公众号</a></li>
+							<li><a href="https://space.bilibili.com/321409388" target="_blank">B站账号</a></li>
+							<li><a>日常攻略</a></li>
+							<li><a>自己写的小玩意</a></li>
 							<li><a>……</a></li>
 						</div>
 					</div>
