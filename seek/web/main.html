@@ -1,57 +1,103 @@
-<!DOCTYPE html>     <!--申明为html文件-->
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"><!--设定编码-->
-		<script src="../../page.js"></script>
-		<link rel="stylesheet" type="text/css" href="../../pageset.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="该程序是四水合铜离子8月19号的第一个程序，考虑改名为Favorskii">   <!--网页描述-->
-        <meta name="suthor" content="四水合铜离子">   <!--手机页面自适应-->
-        <title>四水合铜离子的个人网页</title>
-		<style>
-            @media only screen and (max-width: 600px) {
-                /* 在屏幕宽度小于等于600px时应用的样式 */
-                /* 可以设置元素的宽度、高度、字体大小等 */
-                body {
-                    background-size: cover;
-                }
-                img {
-                    width: 100%;
-                }
-                .block1, .block2 {
-                    width: 90%;
-                    margin: 0 auto;
-                }
+<head>
+    <meta charset="utf-8">
+    <script src="../../page.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../pageset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="该程序是四水合铜离子8月19号的第一个程序，考虑改名为Favorskii">
+    <meta name="author" content="四水合铜离子">
+    <title>四水合铜离子的个人网页</title>
+    <style>
+        @media only screen and (max-width: 600px) {
+            body {
+                background-size: cover;
             }
-        </style>
-    </head>     <!--head头部文件-->
-	<body background="../../背景图.jpg"
-		  style="background-repeat: no-repeat;background-size: 100% 100%; background-attachment: fixed">
-		<div style="text-align: center">
-			<img src="../../头图.png" width=50%>
-		</div>
-		<div class="backgroundset" id="background">
-			<div class="parentblock">
-				<div class="block1" style="background-color: rgba(23,114,180,0.25); padding: 5px" id="box12">
-					<div class="parentblock">
-						<div class="block2" id="box14" >
-							<h3><a href="../../index.html" target="_blank">实用网站</a></h3>
-							<details>
-								<summary>ChatGPT</summary>
-								<li><a href="https://chat18.aichatos.xyz/#/chat/1698391797139" target="_blank">ChatGPT</a></li>
-								<li><a href="https://www.explainthis.io/zh-hans/chatgpt" target="_blank">GPT prompt</a></li>
-							</details>
-							<details>
-								<summary>ChatGPT</summary>
-								<li><a href="https://chat18.aichatos.xyz/#/chat/1698391797139" target="_blank">ChatGPT</a></li>
-								<li><a href="https://www.explainthis.io/zh-hans/chatgpt" target="_blank">GPT prompt</a></li>
-							</details>
-						</div>
-					</div>
-			  </div>
-			</div>
-		</div>
-		<p style="text-align: center">联系我们：1648633668@qq.com</p>
-		<p style="text-align: center">版权所有 | 四水合铜离子</p>
-	</body>
+            img {
+                width: 100%;
+            }
+            .block1, .block2 {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body background="../../背景图.jpg" style="background-repeat: no-repeat;background-size: 100% 100%; background-attachment: fixed">
+    <div style="text-align: center">
+        <img src="../../头图.png" width="50%">
+    </div>
+    <div class="backgroundset" id="background">
+        <div class="parentblock">
+            <div class="block1" style="background-color: rgba(23,114,180,0.25); padding: 5px" id="box12">
+                <div class="parentblock">
+                    <div class="block2" id="box14">
+                        <h3><a href="../../index.html" target="_blank">实用网站</a></h3>
+                        <div id="dynamicContent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center">联系我们：1648633668@qq.com</p>
+    <p style="text-align: center">版权所有 | 四水合铜离子</p>
+
+    <script>
+
+		document.addEventListener('DOMContentLoaded', function() {
+            const links = [
+            {
+                title: 'AI与ChatGPT',
+                open: true,
+                items: [
+                    { title: 'Kimi', url: 'https://kimi.moonshot.cn/', description: 'Kimi助手' },
+                    { title: 'ChatGPT镜像', url: 'https://chat18.aichatos.xyz/#/chat/1698391797139', description: '自用的一个镜像网站' },
+                    { title: 'GPT prompt', url: 'https://www.explainthis.io/zh-hans/chatgpt', description: 'GPT指令大全' },
+					{ title: 'ShowMeAI', url: 'https://www.showmeai.tech/', description: '免费AI教程网站'}
+                ]
+            },
+			{
+				title: '化学类',
+				open: true,
+				items: [
+					{ title: 'AIST谱图库', url: 'https://sdbs.db.aist.go.jp/', description: 'AIST谱图库，一般用这个找'},
+					{ title: 'NIST谱图库', url: 'https://webbook.nist.gov/chemistry/', description: 'NIST数据库，辅助找红外等'},
+					{ title: '元素周期表性质', url: 'https://ptable.com/#%E6%80%A7%E8%B4%A8', description: '周期表内各元素性质'}
+				]
+			},
+			{
+				title: '找资源',
+				open: true,
+				items:[
+					{ title: 'I Love PDF', url: 'https://www.ilovepdf.com/zh-cn', description: 'PDF合并、转换等功能' },
+					{ title: 'aconvert', url: 'https://www.aconvert.com/cn/', description: '各种文件格式转化'},
+					{ title: '猫啃网', url: 'https://www.maoken.com/', description: '免费字体下载'},
+					{ title: '在线配色器', url: 'https://www.chinavid.com/color.html', description: '在线配色，包含色彩搭配、传统颜色等'},
+					{ title: 'MyFreeMP3', url: 'https://tools.liumingye.cn/music/#/explore/artist', description: '免费下载mp3'},
+					{ title: 'psdRepo', url: 'https://psdrepo.com/', description: '免费PSD下载'},
+					{ title: 'phosphoricons', url: 'https://phosphoricons.com/', description: 'Icon下载'},
+					{ title: 'pixabay', url: 'https://pixabay.com/', description: '免费图片下载(General)'},
+					{ title: 'foodiesfeed', url: 'https://www.foodiesfeed.com/', description: '免费图片下载(Food)'},
+					{ title: 'tunefind', url: 'https://www.tunefind.com/', description: '剧目音乐合集'},
+
+				]
+			},
+            {
+                title: '其他网站',
+                open: false,
+                items: [
+                    { title: '时光邮局', url: 'https://www.hi2future.com/', description: '给未来的某一刻写封信'},
+					{ title: '加密音乐解锁', url: 'http://www.atoolbox.net/Tool.php?Id=860', description: '解密QQ音乐、网易云音乐等文件'},
+					{ title: '今日热榜', url: 'https://tophub.today/', description: ''}, 
+					{ title: '临时邮箱', url: 'http://24mail.chacuo.net/', description:'临时邮箱，可用来接收不必要的邮件'},
+                ]
+            }
+        ];
+
+            const detailsContent = generateDetailsContent(links);
+            document.getElementById('dynamicContent').innerHTML = detailsContent;
+        });
+        
+    </script>
+</body>
 </html>

@@ -9,3 +9,26 @@ function openLinkWithPassword(event) {
     	alert('密码错误，请重试。');
      }
 }
+
+function generateDetailsContent(links) {
+  return links.map(link => {
+      const openAttr = link.open ? ' open' : '';
+      const itemsHtml = link.items.map(item => {
+          return `
+              <li>
+                  <a href="${item.url}" target="_blank">${item.title}</a>
+                  ${item.description ? ` —— ${item.description}` : ''}
+              </li>
+          `;
+      }).join('');
+
+      return `
+          <details${openAttr}>
+              <summary>${link.title}</summary>
+              <ul>
+                  ${itemsHtml}
+              </ul>
+          </details>
+      `;
+  }).join('');
+}

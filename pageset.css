@@ -45,6 +45,7 @@ h2{
 #boxtransparent{
 	color: #ffffff;
 }
+
 details {
 	border: 1px solid #aaa;
 	border-radius: 4px;
@@ -65,3 +66,4 @@ details[open] summary {
 	border-bottom: 1px solid #aaa;
 	margin-bottom: 0.5em;
 }
+
