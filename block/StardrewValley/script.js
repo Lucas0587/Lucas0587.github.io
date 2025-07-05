@@ -37,7 +37,7 @@ async function fetchCSV() {
 		displayCSV(csvData);
 	} catch (error) {
 		console.error('Failed to fetch CSV file:', error);
-		document.getElementById('csv-content').innerText = 'Failed to load CSV file';
+		document.getElementById('csvcontent').innerText = 'Failed to load CSV file';
 	}
 }
 
@@ -115,7 +115,7 @@ async function handleFileUpload(event) {
         reader.readAsText(file);
     } catch (error) {
         console.error('Failed to read CSV file:', error);
-        document.getElementById('csv-content').innerText = 'Failed to load CSV file';
+        document.getElementById('csvcontent').innerText = 'Failed to load CSV file';
     }
 }
 
