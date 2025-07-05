@@ -22,17 +22,15 @@
                     margin: 0 auto;
                 }
 				table {
-					width: 100%;
-					border-collapse: collapse;
-					margin-top: 20px;
+				  width: 100%;
+				  border-collapse: collapse; /* 合并边框 */
 				}
 				th, td {
-					border: 1px solid #ccc;
-					padding: 8px;
-					text-align: left;
+				  border: 5px solid #000; /* 设置边框颜色和宽度 */
+				  padding: 8px; /* 设置单元格内边距 */
 				}
 				th {
-					background-color: #f2f2f2;
+				  background-color: #f2f2f2; /* 设置表头背景颜色 */
 				}
 				label {
 					margin: 5px;
@@ -43,7 +41,7 @@
 	<body background="../../背景图.jpg"
 		  style="background-repeat: no-repeat;background-size: 100% 100%; background-attachment: fixed">
 		<div style="text-align: center">
-			<img src="../../头图.png" width=50%>
+			<img src="../../头图.png" width="50%" alt="头图">
 		</div>
 		<div class="backgroundset" id="background">
 			<div class="parentblock">
@@ -52,11 +50,25 @@
 						<div class="block2" id="box14">
 							<h3><a href="../../index.html" target="_blank">星露谷物语</a></h3>
 							<p style="text-indent:2em;">鱼</p>
-							<label><input type="radio" name="season" value="spring" onclick="filterSeason('spring')"> 春季</label>
-							<label><input type="radio" name="season" value="summer" onclick="filterSeason('summer')"> 夏季</label>
-							<label><input type="radio" name="season" value="autumn" onclick="filterSeason('autumn')"> 秋季</label>
-							<label><input type="radio" name="season" value="winter" onclick="filterSeason('winter')"> 冬季</label>
-							<div id="csv-content"></div>
+							<fieldset>
+								<label><input type="radio" name="season" value="春季"> 春季</label>
+								<label><input type="radio" name="season" value="夏季"> 夏季</label>
+								<label><input type="radio" name="season" value="秋季"> 秋季</label>
+								<label><input type="radio" name="season" value="冬季"> 冬季</label>
+								<label><input type="radio" name="season" value="any"> </label>
+							</fieldset>
+							<fieldset>
+								<label><input type="radio" name="place" value="海洋"> 海洋</label>
+								<label><input type="radio" name="place" value="河流"> 河流</label>
+								<label><input type="radio" name="place" value="湖泊"> 湖泊</label>
+								<label><input type="radio" name="place" value="姜岛"> 姜岛</label>
+								<label><input type="radio" name="place" value="any"> </label>
+							</fieldset>
+							
+<!--							<input type="file" id="file-input" accept=".csv" style="display: none;"><button id="upload-button" onclick="document.getElementById('file-input').click()">上传 CSV 文件</button>-->
+							<p></br></p>
+							<p></br></p>
+							<div id="csvcontent"></div>
 							<script src="script.js"></script>
 						</div>
 					</div>
