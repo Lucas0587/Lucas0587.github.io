@@ -40,7 +40,7 @@ let csvData = [];
         }
 
         function filterSeason(season) {
-            const seasonIndex = 3; // 假设季节列是第四列
+            const seasonIndex = 9; // 假设季节列是第十列
             const filteredData = csvData.filter(row => row[seasonIndex].toLowerCase() === season);
             displayCSV(filteredData);
         }
