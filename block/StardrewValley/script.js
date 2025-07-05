@@ -7,7 +7,6 @@ let currentPlace = null;
 document.querySelectorAll('input[name="season"]').forEach(radio => {
   radio.addEventListener('change', () => {
     currentSeason = document.querySelector('input[name="season"]:checked').value;
-    console.log("选中的季节是：", currentSeason);
     if (currentPlace) {
       filterByBoth(currentSeason, currentPlace);
     }
@@ -18,7 +17,6 @@ document.querySelectorAll('input[name="season"]').forEach(radio => {
 document.querySelectorAll('input[name="place"]').forEach(radio => {
   radio.addEventListener('change', () => {
     currentPlace = document.querySelector('input[name="place"]:checked').value;
-    console.log("选中的地点是：", currentPlace);
     if (currentSeason) {
       filterByBoth(currentSeason, currentPlace);
     }
