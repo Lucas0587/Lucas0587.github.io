@@ -21,6 +21,19 @@
                     width: 90%;
                     margin: 0 auto;
                 }
+				table {
+					width: 100%;
+					border-collapse: collapse;
+					margin-top: 20px;
+				}
+				th, td {
+					border: 1px solid #ccc;
+					padding: 8px;
+					text-align: left;
+				}
+				th {
+					background-color: #f2f2f2;
+				}
             }
         </style>
     </head>     <!--head头部文件-->
@@ -36,50 +49,12 @@
 						<div class="block2" id="box14">
 							<h3><a href="../../index.html" target="_blank">星露谷物语</a></h3>
 							<p style="text-indent:2em;">鱼</p>
+							<label><input type="radio" name="season" value="spring" onclick="filterSeason('spring')"> 春季</label>
+							<label><input type="radio" name="season" value="summer" onclick="filterSeason('summer')"> 夏季</label>
+							<label><input type="radio" name="season" value="autumn" onclick="filterSeason('autumn')"> 秋季</label>
+							<label><input type="radio" name="season" value="winter" onclick="filterSeason('winter')"> 冬季</label>
 							<div id="csv-content"></div>
-<script>
-        async function fetchCSV() {
-            try {
-                const response = await fetch('fish.csv'); // 替换为你的 CSV 文件路径
-                const csvContent = await response.text();
-                displayCSV(csvContent);
-            } catch (error) {
-                console.error('Failed to fetch CSV file:', error);
-                document.getElementById('csv-content').innerText = 'Failed to load CSV file';
-            }
-        }
-
-        function displayCSV(csvContent) {
-            const rows = csvContent.split('\n');
-            const table = document.createElement('table');
-
-            rows.forEach(row => {
-                const cells = row.split(',');
-                const tr = document.createElement('tr');
-
-                cells.forEach((cell, index) => {
-                    const td = document.createElement('td');
-                    if (index === 0) { // 第一列是图片地址
-                        const img = document.createElement('img');
-                        img.src = cell.trim();
-                        img.alt = 'Image';
-                        td.appendChild(img);
-                    } else {
-                        td.textContent = cell.trim();
-                    }
-                    tr.appendChild(td);
-                });
-
-                table.appendChild(tr);
-            });
-
-            document.getElementById('csv-content').innerHTML = '';
-            document.getElementById('csv-content').appendChild(table);
-        }
-
-        // 自动加载 CSV 文件
-        fetchCSV();
-    </script>
+							<script src="script.js"></script>
 						</div>
 					</div>
 			  </div>

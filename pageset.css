@@ -66,20 +66,4 @@ details[open] summary {
 	border-bottom: 1px solid #aaa;
 	margin-bottom: 0.5em;
 }
-table {
-	width: 100%;
-	border-collapse: collapse;
-	margin-top: 20px;
-}
-th, td {
-	border: 1px solid #ccc;
-	padding: 8px;
-	text-align: left;
-}
-th {
-	background-color: #f2f2f2;
-}
-img {
-	max-width: 100px; /* 控制图片大小 */
-	height: auto;
-}
+
