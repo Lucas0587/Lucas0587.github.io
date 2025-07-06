@@ -35,6 +35,11 @@
 				label {
 					margin: 5px;
 				}
+				#csvcontent{
+					margin: 0 auto; /* 水平居中 */
+					display: block; /* 确保 margin: 0 auto 生效 */
+				}
+				
             }
         </style>
     </head>     <!--head头部文件-->
@@ -45,20 +50,18 @@
 		</div>
 		<div class="backgroundset" id="background">
 			<div class="parentblock">
-				<div class="block1" style="background-color: rgba(23,114,180,0.25); padding: 5px" id="box12">
-					<div class="parentblock">
+					<div class="parentblock" style="display: block; margin: 0 auto;">
 						<div class="block2" id="box14">
-							<ul>
-							  <li><a href="fish.html">鱼</a></li> 
-								<p>选中季节和地点，展现当前季节、当前地点可钓到的鱼，并且按照价格排序</p>
-							  <li><a>矿物</a></li>
-								<p>检查矿物捐献情况，对开下一个晶球做规划</p>
-							</ul>
+							<h3>矿物</h3>
+							
+<!--							<input type="file" id="file-input" accept=".csv" style="display: none;"><button id="upload-button" onclick="document.getElementById('file-input').click()">上传 CSV 文件</button>-->
 							<p></br></p>
 							<p></br></p>
+							<div id="csvcontent"></div>
+							<script src="mineral.js"></script>
 						</div>
 					</div>
-			  </div>
+
 			</div>
 		</div>
 		<p style="text-align: center">联系我们：1648633668@qq.com</p>
